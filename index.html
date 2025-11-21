@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Yulsem — Product Designer & Front-End</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site_header" id="site_header">
+        <div class="container header_row">
+            <h1 class="brand_logo title_gra"><img src="asset/fylogo.png" alt="FlowYulLab"></h1>
+            <nav class="primary_nav">
+                <a href="#hero">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#info">Info</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#stats">Stats</a>
+            </nav>
+            <button class="menu_toggle" id="menu_toggle" aria-label="open menu">☰</button>
+        </div>
+        <div class="mobile_panel" id="mobile_panel">
+            <nav class="mobile_menu">
+                <a href="#hero">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#info">Info</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#stats">Stats</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero_section">
+        <figure>
+            <video src="asset/vid_logo.mp4" loop autoplay muted></video>
+        </figure>
+        <div class="container">
+            <h1 class="hero_title">Product Designer & Front-End</h1>
+            <p class="hero_sub">I craft delightful interfaces, motion systems, and experiments with GSAP, WebGL, and
+                modern UX.</p>
+            <span class="magnet_zone"><a href="#projects" class="hero_cta cta_btn">Explore Work →</a></span>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee_section features_section">
+        <div class="marquee_wrap">
+            <div class="marquee_row">
+                <div class="marquee_item title_gra">PORTFOLIO</div>
+                <div class="marquee_item title_gra">INTERACTIONS</div>
+                <div class="marquee_item title_gra">BRANDING</div>
+                <div class="marquee_item title_gra">WEBGL</div>
+                <div class="marquee_item title_gra">GSAP</div>
+                <div class="marquee_item title_gra">UX WRITING</div>
+            </div>
+        </div>
+        <div class="container" id="projects">
+            <h2>Selected <strong>Projects</strong></h2>
+            <div class="features_grid ">
+                <article class="feature_card tilt_card">
+                    <div class="tilt_layer">
+                        <h3><strong>La MUSE</strong><span>Beauty Magazine</span></h3>
+                        <p>Subscription platform with editorial CMS, responsive design, and motion guidelines.</p>
+                    </div>
+                </article>
+                <article class="feature_card tilt_card">
+                    <div class="tilt_layer">
+                        <h3><strong>BLOOP</strong><span>Fan Goods Community</span></h3>
+                        <p>React + TypeScript community for K-fandom merch: filters, likes, and detail auth.</p>
+                    </div>
+                </article>
+                <article class="feature_card tilt_card">
+                    <div class="tilt_layer">
+                        <h3><strong>GOONGle</strong> <span>K-Brand Map</span></h3>
+                        <p>City discovery with brand stories, parallax scroll, and optimized GSAP pipelines.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="marquee_wrap reverse">
+            <div class="marquee_row">
+                <div class="marquee_item title_gra2">PORTFOLIO</div>
+                <div class="marquee_item title_gra2">INTERACTIONS</div>
+                <div class="marquee_item title_gra2">BRANDING</div>
+                <div class="marquee_item title_gra2">WEBGL</div>
+                <div class="marquee_item title_gra2">GSAP</div>
+                <div class="marquee_item title_gra2">UX WRITING</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- 
+    <div class="spacer"></div> -->
+
+    <!--info_section -->
+    <section id="info" class="info_section">
+        <div class="wrapper">
+            <div class="info">
+                <h2>Infomation <strong>Designer</strong></h2>
+                <div class="sticky_box">
+                </div>
+            </div>
+
+            <div class="projects">
+                <div class="card">
+                    <h4>🔍 프로젝트 A</h4>
+                    <p>모바일 앱 UX 개선 프로젝트로 사용자 이탈률 15% 감소 성과 달성</p>
+                </div>
+                <div class="card">
+                    <h4>🔍 프로젝트 A</h4>
+                    <p>모바일 앱 UX 개선 프로젝트로 사용자 이탈률 15% 감소 성과 달성</p>
+                </div>
+                <div class="card">
+                    <h4>🔍 프로젝트 A</h4>
+                    <p>모바일 앱 UX 개선 프로젝트로 사용자 이탈률 15% 감소 성과 달성</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase (Pin + Floating Photos) -->
+    <section id="showcase" class="pin_scene">
+        <div class="pin_layer">
+            <div class="pin_bg" id="pin_bg"
+                style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop')">
+            </div>
+            <div class="pin_overlay"></div>
+            <div class="pin_copy">
+                <h2>Motion-Driven Storytelling</h2>
+                <p>Background subtly blurs while 6 photos float upward, rotating as they layer in.</p>
+            </div>
+            <div class="float_wrap">
+                <div class="photo p1">
+                </div>
+                <div class="photo p2">
+                </div>
+                <div class="photo p3">
+                </div>
+                <div class="photo p4">
+                </div>
+                <div class="photo p5">
+                </div>
+                <div class="photo p6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Gallery -->
+    <section id="gallery" class="horizontal_section">
+        <div class="track">
+            <div class="h_item">Case A</div>
+            <div class="h_item">Case B</div>
+            <div class="h_item">Case C</div>
+            <div class="h_item">Case D</div>
+            <div class="h_item">Case E</div>
+        </div>
+    </section>
+
+    <!-- Stats (counters) -->
+    <section id="stats" class="stats_section">
+        <div class="container">
+            <h2>Impact in Numbers</h2>
+            <div class="stats_grid">
+                <div class="stat_box">
+                    <div class="stat_value" data-count-to="100">0</div>
+                    <div class="stat_label">Projects</div>
+                </div>
+                <div class="stat_box">
+                    <div class="stat_value" data-count-to="48">0</div>
+                    <div class="stat_label">Awards</div>
+                </div>
+                <div class="stat_box">
+                    <div class="stat_value" data-count-to="210">0</div>
+                    <div class="stat_label">Students Mentored</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta_section">
+        <div class="container">
+            <h2>Let’s build something meaningful.</h2>
+            <p>Available for product design, motion systems, and front-end collaborations.</p>
+            <span class="magnet_zone"><a href="mailto:yulssem_nim@naver.com" class="cta_btn">Get in touch →</a></span>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
