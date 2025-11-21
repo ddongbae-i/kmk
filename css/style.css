@@ -515,6 +515,7 @@ h2 {
   flex-direction: column;
   gap: 16vh;
   margin-top: 160px;
+  margin-bottom: 170px;
 }
 
 .info_section .card {
@@ -543,6 +544,7 @@ h2 {
 .info_section .card .txt_area {
   color: #ffffff;
   font-size: 1.2rem;
+  width: 45vw;
 }
 
 .info_section .card em {
@@ -560,6 +562,9 @@ h2 {
 }
 
 .info_section .btn a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
   border: 1px solid #fff1b94c;
   padding: 14px 20px;
   width: 170px;
@@ -568,8 +573,26 @@ h2 {
   color: var(--accent2);
   font-weight: 800;
   background: rgba(117, 131, 133, 0.06);
+  transition: color 0.3s ease;
 }
 
+.info_section .btn a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent2);
+  width: 0;
+  z-index: -1;
+  transition: width 0.35s ease;
+}
+
+.info_section .btn a:hover::before {
+  width: 100%;
+}
+
+.info_section .btn a:hover {
+  color: #000;
+}
 /* ===== Pin + Floating Photos ===== */
 .pin_scene {
   padding: 0;
