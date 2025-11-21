@@ -57,9 +57,9 @@ function set_active(link) {
 // 섹션 맵 정의
 const sub_map = [
   "#hero",
-  "#projects",
+  "#about",
+  "#skill",
   "#showcase",
-  "#info",
   "#gallery",
   "#stats",
   "#contact"
@@ -72,7 +72,7 @@ sub_map.forEach((id) => {
   );
   if (!section || !linkEl.length) return;
 
-  if (id === "#showcase") {
+  if (id === "#Skill") {
     // Showcase → pin_scene ScrollTrigger와 동일
     ScrollTrigger.create({
       trigger: section,
@@ -81,7 +81,7 @@ sub_map.forEach((id) => {
       onEnter: () => linkEl.forEach((a) => set_active(a)),
       onEnterBack: () => linkEl.forEach((a) => set_active(a)),
     });
-  } else if (id === "#info") {
+  } else if (id === "#showcase") {
     // Gallery → horizontal_section ScrollTrigger와 동일
     ScrollTrigger.create({
       trigger: ".info_section .wrapper",
@@ -248,7 +248,7 @@ document.querySelectorAll(".feature_card").forEach((card) => {
     glass.style.background = `
       radial-gradient(
         circle at ${x}px ${y}px,
-        rgba(240,222,68, 0.4),
+        rgba(138, 245, 233, 0.4),
         rgba(196,196,68, 0) 30%
       )
     `;
