@@ -514,7 +514,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16vh;
-  margin-top: 140px;
+  margin-top: 160px;
 }
 
 .info_section .card {
@@ -527,26 +527,47 @@ h2 {
   /* background: #1f1f1f; */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.info_section .card:nth-child(3) {
 }
 
 .info_section .card h4 {
   font-size: 2.5rem;
   margin-bottom: 4px;
-  color: #fac480;
+  color: #f6d4aa;
+  margin-bottom: 20px;
 }
 
 .info_section .card .txt_area {
-  color: #e7e7e7;
+  color: #ffffff;
   font-size: 1.2rem;
-  margin-top: 20px;
 }
 
 .info_section .card em {
+  margin-top: 20px;
   font-style: normal;
 }
 
 .info_section .card p {
   margin-top: 4px;
+}
+
+.info_section .btn {
+  display: flex;
+  gap: 16px;
+}
+
+.info_section .btn a {
+  border: 1px solid #fff1b94c;
+  padding: 14px 20px;
+  width: 170px;
+  text-align: center;
+  border-radius: 999px;
+  color: var(--accent2);
+  font-weight: 800;
+  background: rgba(117, 131, 133, 0.06);
 }
 
 /* ===== Pin + Floating Photos ===== */
