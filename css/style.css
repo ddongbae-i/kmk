@@ -487,7 +487,6 @@ h2 {
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .info_section .info {
@@ -496,7 +495,7 @@ h2 {
   position: relative;
   top: 50px;
   height: 50vh;
-  width: clamp(300px, 40vw, 700px);
+  width: clamp(300px, 40vw, 500px);
 }
 .info_section .info h2 {
   margin-bottom: 20px;
@@ -506,7 +505,8 @@ h2 {
   width: 100%;
   height: 100%;
   background-size: cover;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(248, 248, 248, 0.1);
+  border-radius: 24px;
 }
 
 .projects {
@@ -514,17 +514,39 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 16vh;
-  margin-top: 164px;
+  margin-top: 140px;
 }
 
 .info_section .card {
-  background: var(--bg-Cdeep-color1);
+  /* background: var(--bg-Cdeep-color1); */
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--accent);
+  /* border: 1px solid var(--accent); */
   height: 50vh;
-  align-content: center;
+  /* background: #1f1f1f; */
+  display: flex;
+  flex-direction: column;
+}
+
+.info_section .card h4 {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+  color: #fac480;
+}
+
+.info_section .card .txt_area {
+  color: #e7e7e7;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.info_section .card em {
+  font-style: normal;
+}
+
+.info_section .card p {
+  margin-top: 4px;
 }
 
 /* ===== Pin + Floating Photos ===== */
