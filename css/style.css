@@ -121,7 +121,7 @@ section {
   width: 100%;
   z-index: 9999;
   backdrop-filter: saturate(120%) blur(10px);
-  background: var(--header);
+  background: #fff6d14c;
   /* border-bottom: 1px solid var(--border); */
   transform: translateY(-100%);
   will-change: transform;

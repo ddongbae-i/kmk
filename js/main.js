@@ -259,7 +259,7 @@ const cards = gsap.utils.toArray(".info_section .card");
 
 // info1.png, info2.png, info3.png 순서로 자동 매핑
 cards.forEach((card, i) => {
-  const imgUrl = `asset/info${i + 1}.png`;
+  const imgUrl = `./asset/info${i + 1}.png`;
 
   ScrollTrigger.create({
     trigger: card,
@@ -289,7 +289,7 @@ function changeBg(imgUrl) {
 function holdPrevious(index) {
   // 첫 카드 전이면 info1 유지
   const prevIndex = Math.max(0, Math.min(cards.length - 1, index));
-  const prevImgUrl = `asset/info${prevIndex + 1}.png`;
+  const prevImgUrl = `./asset/info${prevIndex + 1}.png`;
   stickyBox.style.backgroundImage = `url(${prevImgUrl})`;
 }
 
