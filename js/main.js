@@ -191,13 +191,6 @@ gsap.from(".info_section .card", {
 });
 
 
-
-
-
-
-
-
-
 // ==================== Features reveal ====================
 gsap.to(".feature_card", {
   y: 0,
@@ -208,7 +201,7 @@ gsap.to(".feature_card", {
   scrollTrigger: {
     trigger: ".features_grid",
     start: "top 50%",
-    toggleActions: "play reverse play reverse", // ✅ 역방향까지
+    toggleActions: "play reverse play reverse",
   },
 });
 
@@ -226,7 +219,7 @@ gsap.from(".feature_card .word", {
   scrollTrigger: {
     trigger: ".features_grid",
     start: "top 50%",
-    toggleActions: "play reverse play reverse", // ✅ 역방향까지
+    toggleActions: "play reverse play reverse",
   },
 });
 
@@ -248,8 +241,8 @@ document.querySelectorAll(".feature_card").forEach((card) => {
     glass.style.background = `
       radial-gradient(
         circle at ${x}px ${y}px,
-        rgba(138, 245, 233, 0.4),
-        rgba(196,196,68, 0) 30%
+        rgba(230, 225, 167, 0.2),
+        rgba(171, 172, 83, 0) 30%
       )
     `;
   });

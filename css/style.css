@@ -301,9 +301,13 @@ h2 {
   padding-block: 10vh;
 }
 
-.marquee_section h2 {
-  color: var(--sub-color2);
+/* .marquee_section h2 {
+  color: rgba(255, 246, 234, 0.799);
 }
+
+.marquee_section h2 strong {
+  color: rgb(255, 225, 179);
+} */
 
 .marquee_wrap {
   display: flex;
@@ -346,7 +350,7 @@ h2 {
 .features_section .features_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
 }
 
 .feature_card {
@@ -355,13 +359,15 @@ h2 {
   min-height: 420px;
   transform: translateY(24px);
   opacity: 0;
-  outline: 2px solid rgba(102, 196, 198, 1);
+  outline: 1px solid #fff1b94c;
   perspective: 800px;
   will-change: transform;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  background: rgba(117, 131, 133, 0.06);
 
   /* background-image: linear-gradient(
     to left top,
@@ -377,6 +383,8 @@ h2 {
   /*   background: conic-gradient(from 40deg at 50% 50%, #09114B 0deg, #157654 180deg, #FFBE0B 360deg); */
   overflow: hidden;
   /* 반사광이 밖으로 안 새게 */
+  margin-top: 16px;
+  transition: 0.4s;
 }
 
 .glass_reflect {
@@ -402,22 +410,59 @@ h2 {
 }
 
 .feature_card h3 {
-  margin: 0 0 20px;
   font-size: 1.2rem;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   font-weight: 300;
   flex-direction: column;
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: rgb(247, 236, 220);
 }
+
+/* .feature_card h3 em {
+  font-style: normal;
+  color: rgb(205, 192, 178);
+} */
 
 .feature_card h3 > strong {
   font-size: 2rem;
   font-weight: 600;
+  margin-bottom: 2px;
+  color: #f6d4aa;
 }
 
 .feature_card p {
-  width: 100%;
-  color: #fff;
+  width: 93%;
+  color: rgb(255, 254, 252);
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+.feature_card p strong {
+  color: rgb(255, 216, 171);
+}
+
+.feature_card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: scale(1.03);
+  opacity: 1;
+  outline: 1px solid #fff1b990;
+}
+
+.feature_card:hover h3,
+.feature_card:hover h3 > strong {
+  color: rgb(255, 220, 179);
+  text-shadow: 0 0 10px rgba(255, 209, 157 0.5);
+}
+
+.feature_card:hover p strong {
+  color: rgb(255, 220, 179);
+  text-shadow: 0 0 10px rgba(255, 209, 157 0.5);
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .tilt_layer {
@@ -434,14 +479,15 @@ h2 {
 .info_section {
   background: linear-gradient(180deg, var(--primary-color), #000);
   /* background: var(--primary-color); */
-  padding: 5vh 5vw;
+  padding: 10vh 5vw;
   height: auto;
 }
 
 .info_section .wrapper {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .info_section .info {
@@ -450,7 +496,10 @@ h2 {
   position: relative;
   top: 50px;
   height: 50vh;
-  width: clamp(300px, 40vw, 500px);
+  width: clamp(300px, 40vw, 700px);
+}
+.info_section .info h2 {
+  margin-bottom: 20px;
 }
 
 .sticky_box {
@@ -464,7 +513,8 @@ h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20vh;
+  gap: 16vh;
+  margin-top: 164px;
 }
 
 .info_section .card {
@@ -479,6 +529,7 @@ h2 {
 
 /* ===== Pin + Floating Photos ===== */
 .pin_scene {
+  padding: 0;
   height: 100vh;
   overflow: hidden;
 }
@@ -663,9 +714,10 @@ h2 {
 }
 
 .h_item {
-  min-width: 70vw;
-  height: 60vh;
-  margin: 0 4vw;
+  min-width: 30vw;
+  max-height: 30vw;
+  height: 50vh;
+  margin: 0 1.5vw;
   border-radius: 24px;
   display: grid;
   place-items: center;
@@ -674,6 +726,12 @@ h2 {
   color: #0c1217;
   font-weight: 800;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.h_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 /* ===== Stats (counters) ===== */
