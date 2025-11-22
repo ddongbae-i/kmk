@@ -531,7 +531,11 @@ h2 {
   justify-content: space-between;
 }
 
-.info_section .card:nth-child(3) {
+.info_section .card::after {
+  content: "";
+  width: 1000px;
+  height: 1px;
+  background: #fff1b94c;
 }
 
 .info_section .card h4 {
